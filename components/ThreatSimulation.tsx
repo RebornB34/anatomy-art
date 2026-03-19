@@ -56,19 +56,26 @@ export default function ThreatSimulation({ active, onBpmOverride, onPlayPatchSuc
       setPatchProgress((prev) => {
         if (prev >= 100) {
           clearInterval(interval);
-          setStatus('restored');
-          setCurrentThreat(null);
-          onBpmOverride(null);
-          onPlayPatchSuccess();
-          setTimeout(() => {
-            setStatus('idle');
-          }, 2000);
           return 100;
         }
         return prev + 5;
       });
     }, 80);
-  }, [status, onBpmOverride, onPlayPatchSuccess]);
+  }, [status]);
+
+  // Handle patch completion side-effects safely
+  useEffect(() => {
+    if (status === 'patching' && patchProgress >= 100) {
+      setStatus('restored');
+      setCurrentThreat(null);
+      onBpmOverride(null);
+      onPlayPatchSuccess();
+      const timeout = setTimeout(() => {
+        setStatus('idle');
+      }, 2000);
+      return () => clearTimeout(timeout);
+    }
+  }, [status, patchProgress, onBpmOverride, onPlayPatchSuccess]);
 
   // Reset when deactivated
   useEffect(() => {
