@@ -1,5 +1,5 @@
-import InteractiveHeart from '@/components/InteractiveHeart';
+import CyberHeartDashboard from '@/components/CyberHeartDashboard';
 
 export default function Home() {
-  return <InteractiveHeart />;
+  return <CyberHeartDashboard />;
 }
