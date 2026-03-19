@@ -1,0 +1,15 @@
+{"timestamp":"00:00:22.463","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:22.463","source":"Server","level":"LOG","message":"  We detected TypeScript in your project and reconfigured your tsconfig.json file for you. Strict-mode is set to false by default."}
+{"timestamp":"00:00:22.464","source":"Server","level":"LOG","message":"  The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:\n"}
+{"timestamp":"00:00:22.465","source":"Server","level":"LOG","message":"  \t- allowJs was set to true"}
+{"timestamp":"00:00:22.466","source":"Server","level":"LOG","message":"  \t- strict was set to false"}
+{"timestamp":"00:00:22.466","source":"Server","level":"LOG","message":"  \t- incremental was set to true"}
+{"timestamp":"00:00:22.466","source":"Server","level":"LOG","message":"  \t- include was updated to add '.next/types/**/*.ts'"}
+{"timestamp":"00:00:22.466","source":"Server","level":"LOG","message":"  \t- include was updated to add '.next/dev/types/**/*.ts'"}
+{"timestamp":"00:00:22.467","source":"Server","level":"LOG","message":"  \t- plugins was updated to add { name: 'next' }"}
+{"timestamp":"00:00:22.467","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:22.467","source":"Server","level":"LOG","message":"  The following mandatory changes were made to your tsconfig.json:\n"}
+{"timestamp":"00:00:22.467","source":"Server","level":"LOG","message":"  \t- isolatedModules was set to true (requirement for SWC / Babel)"}
+{"timestamp":"00:00:22.467","source":"Server","level":"LOG","message":"  \t- jsx was set to react-jsx (next.js uses the React automatic runtime)"}
+{"timestamp":"00:00:22.468","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:27.497","source":"Server","level":"LOG","message":""}
